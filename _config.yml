@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jiahao Wang"
+title                    : "Khawaja Azfar Asif"
 title_separator          : "-"
-name                     : &name "Jiahao Wang"
-description              : &description "CS PhD Student at JHU."
-url                      : https://JiahaoPlus.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Khawaja Azfar Asif"
+description              : &description "Aspiring Ph.D. student."
+url                      : https://khawajaazfar.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "JiahaoPlus/JiahaoPlus.github.io"
+repository               : "khawajaazfar/khawajaazfar.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,13 +80,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jiahao Wang"
-  avatar           : "bio-photo-0.jpeg"
-  bio              : "CS PhD Student at JHU"  # "Build intelligent machine for human well-being."
-  location         : "Baltimore, US"
+  name             : "Khawaja Azfar Asif"
+  avatar           : "azfar-bio-photo-0.jpg"
+  bio              : "Aspiring Ph.D. student."  # "Build intelligent machine for human well-being."
+  location         : "Lahore, Pakistan"
   employer         :
-  googlescholar    : https://scholar.google.com/citations?user=dKHE3qgAAAAJ
-  email            : "jiahaowg@gmail.com"
+  googlescholar    : #https://scholar.google.com/citations?user=dKHE3qgAAAAJ
+  email            : "Khawajaazfar2000@gmail.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -94,19 +94,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "JiahaoPlus"
+  github           : "Khawajaazfar"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : https://www.linkedin.com/in/jiahaowg/
+  linkedin         : "khawaja-azfar-asif"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : # https://twitter.com/jiahaowg
+  twitter          : # https://twitter.com/
   vine             :
   weibo            :
   xing             :
