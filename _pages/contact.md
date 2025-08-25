@@ -4,5 +4,5 @@ title: "Contact"
 permalink: /contact/
 author_profile: true
 ---
-Email: jiahaowg at gmail.com
+Email: khawajaazfar2000 at gmail.com
 

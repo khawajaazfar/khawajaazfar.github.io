@@ -51,7 +51,7 @@ Advisor: [Prof. Jiayi Ma](https://sites.google.com/site/jiayima2013/). <br> -->
 <b>Dubizzle Labs (Lahore, Pakistan) (Sep. 2024--Present) </b> <br>
 <i>Associte Machine Learning Engineer</i>, Backend. <br>
 
-* <img width="75" height="75" src="https://khawajaazfar.github.io/images/invozone_logo.jpg"/> <br>
+* <img width="75" height="75" src="https://khawajaazfar.github.io/images/Invozone_logo.jpg"/> <br>
 <b>InvoZone (Lahore, Pakistan) (Mar. 2024--May. 2024) </b> <br>
 <i>Machine Learning Intern</i>, Machine Learning, NLP. <br>
 
