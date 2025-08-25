@@ -9,10 +9,6 @@ redirect_from:
 ---
 * Aspiring Ph.D. student, currently working as Machine Learning Engineer at [Dubizzle Labs](https://www.dubizzlelabs.com/).
 
-<!-- * I received my master's degree at [ETH Zürich](https://ethz.ch/en.html), advised by [Prof. Luc Van Gool](https://scholar.google.com/citations?user=TwMib_QAAAAJ). -->
-
-<!-- * I was a visiting research student in [CCVL](https://ccvl.jhu.edu/) group at Johns Hopkins University in 2019. <br>
-I worked closely with [Prof. Alan Yuille](www.cs.jhu.edu/~ayuille/) and [Dr. Weichao Qiu](https://weichaoqiu.com/). -->
 
 * I received my Bachelor of Science in Software Engineering from [Lahore Garrison University](https://lgu.edu.pk/) in 2024.<br>
 During my undergraduate studies, I had the privilege of working under the supervision of [Prof. Rafaqat Alam Khan](https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en). My research focused on Computer Vision using Deep Learning, which provided me with a strong foundation in Skills Gained, e.g., CNN, NLP, RNN, ANN.
@@ -43,7 +39,7 @@ Advisor: [Prof. Luc Van Gool](https://scholar.google.com/citations?hl=zh-CN&user
 
 <!-- * <img width="75" height="75" src="https://jiahaoplus.github.io/images/whu.png"/> <br>
 <b>Wuhan University (Wuhan, China)</b> <br>
-Sep. 2015--Jun. 2019<br>
+Sep. 2015--Jun. 2019<br>d
 Bachelor in Electronic Information Engineering<br>
 GPA: 3.92/4.00, ranking 1/351 <br>
 <i>Teaching Assistant</i> of Signal and Systems. <br>
@@ -56,18 +52,17 @@ Advisor: [Prof. Jiayi Ma](https://sites.google.com/site/jiayima2013/). <br> -->
 <i>Associte Machine Learning Engineer</i>, Backend. <br>
 
 * <img width="75" height="75" src="https://khawajaazfar.github.io/images/invozone_logo.jpg"/> <br>
-<b>InvoZone (Lahore, Pakistan) (Jul. 2019--Aug. 2019) </b> <br>
+<b>InvoZone (Lahore, Pakistan) (Mar. 2024--May. 2024) </b> <br>
 <i>Machine Learning Intern</i>, Machine Learning, NLP. <br>
 
-* <img width="75" height="75" src="https://jiahaoplus.github.io/images/vmware.png"/> <br>
-<b>VMware (Beijing, China) (Sep. 2018--Apr. 2019)</b> <br>
-<i>Software Engineering Intern</i>, Advisor: Dr. Kevin Song <br>
-(1) Service Requests Alerting System<br>
-(2) Graph Mining on Open Source Repositories <br>
-(3) Olfactory Bulb Volume Measurement Using MRI Scans<br>
+* <img width="75" height="75" src="https://khawajaazfar.github.io/images/devsinc_logo.jpg"/> <br>
+<b>DevSinc (Lahore, Pakistan) (Jul. 2024--Sep. 2023)</b> <br>
+<i>Software Engineering Intern</i><br>
+(1) Design and implement a Backend in Django<br>
+(2) Handle testing and integrating<br>
 
-* <img width="75" height="75" src="https://jiahaoplus.github.io/images/UCLA3.png"/> <br>
-<b>University of California, Los Angeles (Los Angeles, CA) (Jul. 2018--Sep. 2018) </b> <br>
-GPA: 4.00/4.00, Bioscience, CSST Program<br>
-<i>Research Assistant</i>, Head and Neck CT Image Segmentation.<br>
-Advisors: [Prof. Daniel Low](https://bioscience.ucla.edu/faculty/daniel-low) and [Prof. Anand Santhanam](https://bioscience.ucla.edu/faculty/anand-p-santhanam).<br>
+* <img width="75" height="75" src="https://khawajaazfar.github.io/images/ai_lab_logo.png"/> <br>
+<b>AI Labs, Lahore Garrison University, (Lahore, Pakistan) (Aug. 2022--Feb. 2023) </b> <br>
+<i>Research Assistant</i><br>
+Worked on SMS Detection System and Object Detection System.<br>
+Advisors: [Dr. Khalid Masood ](https://scholar.google.com/citations?user=-OrHHhwAAAAJ&hl=en)<br>
