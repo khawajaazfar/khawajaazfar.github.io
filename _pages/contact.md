@@ -29,6 +29,9 @@ You can reach me at my professional email address:
 
 Or connect with me on social media:
 
+
+
+
 <div class="social-icons">
   <a href="[https://linkedin.com/in/your-profile](https://www.linkedin.com/in/khawaja-azfar-asif/)" target="_blank" aria-label="LinkedIn">
     <i class="fab fa-linkedin"></i>
