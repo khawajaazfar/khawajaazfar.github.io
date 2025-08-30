@@ -5,9 +5,11 @@ permalink: /publications/
 author_profile: true
 ---
 
- Publications in progress <!-- [Google Scholar](https://scholar.google.com/citations?user=dKHE3qgAAAAJ). -->
+ Publications in progress 
+ 
+ <!-- [Google Scholar](https://scholar.google.com/citations?user=dKHE3qgAAAAJ). -->
 
-<!--<b>[Adding 3D Geometry Control to Diffusion Models](https://arxiv.org/abs/2306.08103)</b> <br>
+<!-- <b>[Adding 3D Geometry Control to Diffusion Models](https://arxiv.org/abs/2306.08103)</b> <br>
 Wufei Ma\*, Qihao Liu\*, <b>Jiahao Wang</b>\*, Angtian Wang, Yaoyao Liu, Adam Kortylewski, Alan Yuille<br>
 (\* equal contribution)<br>
 <i>ICLR 2024 (Spotlight, 5%).</i>

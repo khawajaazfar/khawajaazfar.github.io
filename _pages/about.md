@@ -7,6 +7,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
+
+# About me
+
 * Aspiring Ph.D. student, currently working as Machine Learning Engineer at [Dubizzle Labs](https://www.dubizzlelabs.com/).
 
 
