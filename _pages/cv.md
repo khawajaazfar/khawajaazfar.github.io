@@ -10,5 +10,5 @@ redirect_from:
 {% include base_path %}
 
 Updating...
-[Click to View My Up-to-date Curriculum Vitae (PDF)](https://khawajaazfar.github.io/files/khawajaAzfar_cv.pdf)
+[Click to View My Up-to-date Curriculum Vitae (PDF)](https://khawajaazfar.github.io/files/KhawajaAzfar_CV.pdf)
 
