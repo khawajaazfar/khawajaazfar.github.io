@@ -4,11 +4,11 @@ title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
-  - /resume
+  - /cv
 ---
 
 {% include base_path %}
 
-Updating...
-[Click to View My Up-to-date Curriculum Vitae (PDF)](https://khawajaazfar.github.io/files/KhawajaAzfar_CV.pdf)
+
+[Click to View My Up-to-date __Curriculum Vitae__ ](https://khawajaazfar.github.io/files/KhawajaAzfar_CV.pdf)
 
