@@ -10,7 +10,8 @@ redirect_from:
 
 # About me
 
-* Aspiring Ph.D. student, currently working as Machine Learning Engineer at [Dubizzle Labs](https://www.dubizzlelabs.com/).
+* Aspiring Ph.D. student.
+* Currently working as Machine Learning Engineer at [Dubizzle Labs](https://www.dubizzlelabs.com/).
 
 
 * I received my Bachelor of Science in Software Engineering from [Lahore Garrison University](https://lgu.edu.pk/) in 2024.<br>
