@@ -13,9 +13,8 @@ redirect_from:
 * Aspiring Ph.D. student.
 * Currently working as Machine Learning Engineer at [Dubizzle Labs](https://www.dubizzlelabs.com/).
 
-
-* I received my Bachelor of Science in Software Engineering from [Lahore Garrison University](https://lgu.edu.pk/) in 2024.<br>
-During my undergraduate studies, I had the privilege of working under the supervision of [Dr. Rafaqat Alam Khan](https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en). My research focused on Computer Vision using Deep Learning, which provided me with a strong foundation in Skills Gained, e.g., CNN, NLP, RNN, ANN.
+* I received my Bachelor of Science in Software Engineering from [Lahore Garrison University](https://lgu.edu.pk/) in 2024. My undergraduate thesis: "Dental Enumeration and Diseases Detection on Panoramic X-Rays" a deep learning based model for analysis of Panoramic X-Rays.
+During my undergraduate studies, I had the privilege of working under the supervision of [Dr. Rafaqat Alam Khan](https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en). My research focused on Large Language Model(LLM) and Computer Vision(CV) using Deep Learning, which provided me with a strong foundation in Skills Gained, e.g. YOLO, CNN, NLP, RNN, ANN.
 
 
 <!-- # Recent News
