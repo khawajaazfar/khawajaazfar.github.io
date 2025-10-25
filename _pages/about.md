@@ -12,8 +12,9 @@ redirect_from:
 
 * Aspiring Ph.D. student.
 * Currently working as Machine Learning Engineer at [Dubizzle Labs](https://www.dubizzlelabs.com/).
-* I received my Bachelor of Science in Software Engineering from [Lahore Garrison University](https://lgu.edu.pk/) in 2024. My undergraduate thesis: "Dental Enumeration and Diseases Detection on Panoramic X-Rays" [Teeth Segmentation and Disease Detection Using YOLOv8](https://yolov8-teeth-segmentation-dieseas.onrender.com/), [Teeth Segmentation and Disease Detection Using YOLOv12](https://yolov12-teeth-segmentation-dieseas.onrender.com/) (Will take time in loading) a deep learning based model for analysis of Panoramic X-Rays. 
-During my undergraduate studies, I had the privilege of working under the supervision of [Dr. Rafaqat Alam Khan](https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en). My research focused on Large Language Model(LLM) and Computer Vision(CV) using Deep Learning, which provided me with a strong foundation in Skills Gained, e.g. YOLO, CNN, NLP, RNN, ANN.
+* I received my Bachelor of Science in Software Engineering from [Lahore Garrison University](https://lgu.edu.pk/) in 2024.
+* My undergraduate thesis was **Dental Enumeration and Diseases Detection on Panoramic X-Rays** Try it out using [YOLOv8](https://yolov8-teeth-segmentation-dieseas.onrender.com/), [YOLOv12](https://yolov12-teeth-segmentation-dieseas.onrender.com/) (it will take time in loading) a deep learning based model for analysis of Panoramic X-Rays. 
+During my undergraduate studies, I had the privilege of working under the supervision of [Dr. Rafaqat Alam Khan](https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en). My research interests including AI systems, AI in healthcare, LLMs, diffusion models, medical image processing, explainable AI, and computer vision, which provided me with a strong foundation in Skills Gained.
 
 
 <!-- # Recent News
@@ -36,7 +37,7 @@ Advisor: [Dr. Rafaqat Alam Khan](https://scholar.google.com/citations?user=spYki
 # Experience
 &nbsp; &nbsp; &nbsp; <img width="75" height="75" src="https://khawajaazfar.github.io/images/dubizzlelabs_logo.jpg"/> <br>
 * <b>Dubizzle Labs (Lahore, Pakistan) (Sep. 2024--Present) </b> <br>
-<i>Associte Machine Learning Engineer</i>, Backend. <br>
+<i>Machine Learning Engineer</i>, Backend. <br>
 
 &nbsp; &nbsp; &nbsp; <img width="75" height="75" src="https://khawajaazfar.github.io/images/Invozone_logo.jpg"/> <br>
 * <b>InvoZone (Lahore, Pakistan) (Mar. 2024--May. 2024) </b> <br>
