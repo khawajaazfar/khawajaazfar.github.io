@@ -1,0 +1,225 @@
+/* ========= Reset & Base ========= */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* ========= Background, Font & Overlay ========= */
+body{
+  font-family:"Times New Roman",Times,serif;
+  background:url("images/NYC.jpg") no-repeat center/cover fixed;
+  filter:brightness(0.98) saturate(1);
+  color:#111;
+  line-height:1.6;
+  position:relative;
+}
+
+/* -------- Light overlay to soften highlights -------- */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(255,255,255,0.15);      /* 保持 0.15 透明度 */
+  backdrop-filter:blur(0.2px);
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* ========= Layout Container ========= */
+.container{
+  display:flex;
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 20px;
+  gap:40px;
+}
+
+/* ========= Sidebar ========= */
+.sidebar{width:280px;flex-shrink:0;}
+
+.profile {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid #e5e7eb;
+  border-radius: 0px; /* Change from 8px to 0px for sharp corners */
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+.avatar{
+  width:150px;
+  height:160px;
+  border-radius:5%;
+  object-fit:cover;
+  margin-bottom:20px;
+  border: 2px solid #fff;
+}
+.profile h1{font-size:1.8rem;margin-bottom:8px;color:#003366;}
+.profile .sub{font-size:.95rem;color:#444;margin-bottom:4px;}
+
+/* Icon row */
+.social-links{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+.social-links a{
+  color:#555;
+  font-size:1.3rem;
+  transition:color .2s;
+}
+.social-links a:hover{color:#1e40af;}
+
+/* Icon + text list */
+.icon-text-list{
+  list-style:none;
+  margin-top:18px;
+  text-align:left;
+}
+.icon-text-list li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+  font-size:1rem;
+  color:#333;
+}
+.icon-text-list i{font-size:1.2rem;width:20px;}
+.icon-text-list a{color:#333;text-decoration:none;}
+.icon-text-list a:hover{color:#1e40af;text-decoration:underline;}
+
+/* ========= Main Content ========= */
+.main-content{flex:1;}
+.main-content-inner{
+  background:rgba(255,255,255,0.86);      /* α 改为 0.70 */
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  padding:32px 32px 48px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+main h2{
+  font-size:1.6rem;
+  margin-bottom:16px;
+  border-left:4px solid #2563eb;
+  padding-left:12px;
+  color:#003366;
+}
+main section{margin-bottom:48px;}
+#about p{font-size:1rem;color:#222;}
+
+/* News & Interests */
+#news ul,
+#interests ul{
+  list-style:disc inside;
+  margin-left:12px;
+}
+#news li,
+#interests li{
+  margin-bottom:6px;
+  font-size:.96rem;
+}
+
+/* ========= Publication Cards ========= */
+.pub-card{
+  display:flex;
+  background:#f8fafc;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  margin-bottom:24px;
+}
+.pub-image img{
+  width:180px;
+  height:120px;
+  object-fit:cover;
+}
+.pub-info{
+  padding:16px 20px;
+  flex:1;
+}
+.pub-info h3{
+  font-size:1.1rem;
+  margin-bottom:8px;
+  color:#003366;
+}
+.pub-info .authors{
+  font-size:.9rem;
+  color:#555;
+  margin-bottom:6px;
+}
+.pub-info .venue{
+  font-size:.88rem;
+  font-style:italic;
+  color:#777;
+  margin-bottom:12px;
+}
+.links a{
+  text-decoration:none;
+  color:#2563eb;
+  font-size:.9rem;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.links a:hover{text-decoration:underline;}
+
+/* ========= Responsive ========= */
+@media(max-width:900px){
+  .container{flex-direction:column;gap:20px;}
+  .sidebar{width:100%;}
+  .main-content-inner{padding:24px;}
+  .pub-card{flex-direction:column;}
+  .pub-image img{width:100%;height:auto;}
+}
+
+
+
+
+
+/* Container spacing */
+.icon-text-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.icon-text-list li {
+  margin-bottom: 18px;
+}
+
+/* Base Link Styling */
+.icon-text-list a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #334155; /* Sophisticated slate color */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Beautiful Icon Styling */
+.icon-text-list i {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9; /* Soft light-blue background */
+  color: #2563eb; /* Vibrant professional blue */
+  border-radius: 10px; /* Modern rounded corners (squircle) */
+  margin-right: 15px;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle depth */
+}
+
+/* Elegant Hover Effects */
+.icon-text-list a:hover {
+  color: #2563eb;
+  transform: translateX(8px); /* Slides the link right on hover */
+}
+
+.icon-text-list a:hover i {
+  background: #2563eb; /* Fills the icon box with blue */
+  color: white; /* Turns icon white */
+  transform: rotate(10deg) scale(1.1); /* Slight pop and tilt */
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
