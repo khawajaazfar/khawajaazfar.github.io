@@ -1,73 +1,60 @@
-# 🎓 学术个人主页模板
+🎓 Academic Personal Homepage Template
+A modern, responsive academic homepage template suitable for graduate students, doctoral students, and scholars to showcase their research achievements and academic background.
 
-一个现代化、响应式的学术个人主页模板，适用于研究生、博士生和学者展示他们的研究成果和学术背景。
+✨ Features
+📱Fully responsive design - displays perfectly on all devices
+🎨Modern UI Design - Using gradient backgrounds and elegant typography
+⚡Fast loading - Optimized CSS and JavaScript
+🔧Easy to customize - Clear code structure and comments
+📚Academic Orientation - Content Structure Designed Specifically for Scholars
+🌐 SEO Friendly - Optimized metadata and structured content
+🚀 Get Started Quickly
+Method 1: Deployment via GitHub Pages (Recommended)
+Create a GitHub account
 
-## ✨ 特性
+Register an account at github.com
+Verify your email address
+Create a repository
 
-- 📱 **完全响应式设计** - 在所有设备上都能完美显示
-- 🎨 **现代化UI设计** - 使用渐变背景和优雅的排版
-- ⚡ **快速加载** - 优化的CSS和JavaScript
-- 🔧 **易于自定义** - 清晰的代码结构和注释
-- 📚 **学术导向** - 专为学者设计的内容结构
-- 🌐 **SEO友好** - 优化的元数据和结构化内容
+Click "New repository"
+The warehouse name is named[你的用户名].github.io
+Select "Public"
+Check the box for "Add a README file".
+Upload File
 
-## 🚀 快速开始
+Upload all files to your repository
+Or clone this template repository
+Enable GitHub Pages
 
-### 方法一：GitHub Pages 部署（推荐）
+Go to Settings → Pages in the warehouse
+Select "Deploy from a branch" for Source.
+Branch: Select "main"
+Click Save
+Visit your website
 
-1. **创建GitHub账户**
-   - 访问 [github.com](https://github.com) 注册账户
-   - 验证你的邮箱地址
+Access will be available in a few minutes.https://[你的用户名].github.io
+Method 2: Local Development
+Cloning or downloading files
 
-2. **创建仓库**
-   - 点击 "New repository"
-   - 仓库名命名为 `[你的用户名].github.io`
-   - 选择 "Public"
-   - 勾选 "Add a README file"
+git clone [仓库地址]
+cd academic-homepage
+Start the local server
 
-3. **上传文件**
-   - 将所有文件上传到你的仓库
-   - 或者克隆这个模板仓库
+# 使用Python 3
+python -m http.server 8000
 
-4. **启用GitHub Pages**
-   - 进入仓库的 Settings → Pages
-   - Source 选择 "Deploy from a branch"
-   - Branch 选择 "main"
-   - 点击 Save
+# 或使用Node.js
+npx http-server
 
-5. **访问你的网站**
-   - 等待几分钟后访问 `https://[你的用户名].github.io`
+# 或使用PHP
+php -S localhost:8000
+Access local websites
 
-### 方法二：本地开发
+Open your browser to accesshttp://localhost:8000
+📝 Custom Guide
+1. Modify basic information
+Edit index.htmlthe following content in the file:
 
-1. **克隆或下载文件**
-   ```bash
-   git clone [仓库地址]
-   cd academic-homepage
-   ```
-
-2. **启动本地服务器**
-   ```bash
-   # 使用Python 3
-   python -m http.server 8000
-   
-   # 或使用Node.js
-   npx http-server
-   
-   # 或使用PHP
-   php -S localhost:8000
-   ```
-
-3. **访问本地网站**
-   - 打开浏览器访问 `http://localhost:8000`
-
-## 📝 自定义指南
-
-### 1. 基本信息修改
-
-编辑 `index.html` 文件中的以下内容：
-
-```html
 <!-- 修改个人信息 -->
 <h1>Your Name</h1>  <!-- 改为你的姓名 -->
 <h3>PhD Student in Computer Science</h3>  <!-- 改为你的身份 -->
@@ -76,19 +63,13 @@
 <!-- 修改社交媒体链接 -->
 <a href="mailto:your.email@university.edu">  <!-- 改为你的邮箱 -->
 <a href="https://github.com/yourusername">  <!-- 改为你的GitHub -->
-```
+2. Add your photo
+Rename your profile pictureprofile.jpg
+Put it in images/a folder
+Recommended size: 300x300 pixels, square
+3. Revise the research content
+index.htmlResearch interests and descriptions in the editor's notes :
 
-### 2. 添加你的照片
-
-1. 将你的头像照片重命名为 `profile.jpg`
-2. 放入 `images/` 文件夹
-3. 建议尺寸：300x300像素，正方形
-
-### 3. 修改研究内容
-
-编辑 `index.html` 中的研究兴趣和描述：
-
-```html
 <!-- 在About Me部分 -->
 <div class="about-text">
     <p>修改这里的个人简介...</p>
@@ -100,13 +81,9 @@
     <li>你的研究方向2</li>
     <!-- 添加更多 -->
 </ul>
-```
+4. Add paper publication
+Add your paper to the Publications section:
 
-### 4. 添加论文发表
-
-在Publications部分添加你的论文：
-
-```html
 <div class="publication-item">
     <div class="publication-content">
         <div class="authors">
@@ -122,13 +99,9 @@
         </div>
     </div>
 </div>
-```
+5. Update work experience
+Modify the timeline in the Experience section:
 
-### 5. 更新工作经历
-
-在Experience部分修改时间线：
-
-```html
 <div class="timeline-item">
     <div class="timeline-dot"></div>
     <div class="timeline-content">
@@ -138,13 +111,9 @@
         <p>工作描述...</p>
     </div>
 </div>
-```
+6. Customizable color themes
+styles.cssModify the color variable in :
 
-### 6. 颜色主题自定义
-
-在 `styles.css` 中修改颜色变量：
-
-```css
 /* 主色调 */
 .hero {
     background: linear-gradient(135deg, #你的颜色1, #你的颜色2);
@@ -154,17 +123,11 @@
 .nav-logo a, .social-links a:hover {
     color: #你的强调色;
 }
-```
-
-### 7. 添加CV文件
-
-1. 将你的CV文件重命名为 `CV.pdf`
-2. 放入 `files/` 文件夹
-3. 确保HTML中的链接正确：`href="files/CV.pdf"`
-
-## 📂 文件结构
-
-```
+7. Add CV files
+Rename your CV file toCV.pdf
+Put it in files/a folder
+Ensure that the links in the HTML are correct:href="files/CV.pdf"
+📂 File Structure
 academic-homepage/
 ├── index.html          # 主HTML文件
 ├── styles.css          # CSS样式文件
@@ -175,109 +138,76 @@ academic-homepage/
 │   └── research-featured.png  # 研究图片
 └── files/             # 文件下载文件夹
     └── CV.pdf         # 简历文件
-```
-
-## 🎨 设计说明
-
-### 配色方案
-- **主色调**: 蓝紫渐变 (#667eea → #764ba2)
-- **文字色**: 深灰色系 (#1e293b, #475569)
-- **强调色**: 蓝色 (#2563eb)
-- **背景色**: 浅灰白色 (#f8fafc)
-
-### 字体
-- **主字体**: Inter (现代无衬线字体)
-- **图标**: Font Awesome 6
-
-### 响应式断点
-- **桌面**: >768px
-- **平板**: 481px-768px
-- **手机**: ≤480px
-
-## 🛠️ 高级自定义
-
-### 添加新的部分
-
-1. 在HTML中添加新的section：
-```html
+🎨 Design Description
+Color scheme
+Main color scheme : Blue-purple gradient (#667eea → #764ba2)
+Text color : Dark gray (#1e293b, #475569)
+Accent color : Blue (#2563eb)
+Background color : Light grayish-white (#f8fafc)
+Font
+Main font : Inter (modern sans-serif font)
+Icon : Font Awesome 6
+Responsive breakpoints
+Desktop : >768px
+Tablet : 481px-768px
+Mobile phone : ≤480px
+🛠️ Advanced Customization
+Add new section
+Add a new section to the HTML:
 <section id="teaching" class="teaching">
     <div class="container">
         <h2>Teaching</h2>
         <!-- 你的内容 -->
     </div>
 </section>
-```
-
-2. 在CSS中添加对应样式：
-```css
+Add the corresponding style to your CSS:
 .teaching {
     padding: 6rem 0;
     background: white;
 }
-```
-
-3. 在导航菜单中添加链接：
-```html
+Add a link to the navigation menu:
 <li><a href="#teaching">Teaching</a></li>
-```
+Add blog functionality
+If you need blog functionality, we recommend using a static site generator such as Jekyll or Hugo.
 
-### 添加博客功能
+SEO optimization
+Add the following to <head>the section:
 
-如果你需要博客功能，建议使用Jekyll或者Hugo等静态网站生成器。
-
-### SEO优化
-
-在 `<head>` 部分添加：
-
-```html
 <meta name="description" content="你的个人简介">
 <meta name="keywords" content="你的姓名,研究领域,大学">
 <meta property="og:title" content="你的姓名 - Academic Homepage">
 <meta property="og:description" content="你的个人简介">
 <meta property="og:image" content="images/profile.jpg">
-```
+🐛 Frequently Asked Questions
+Q: What should I do if the image is not displaying?
+A: Check if the image path is correct and ensure the image file is in images/the folder.
 
-## 🐛 常见问题
+Q: How do I change the website icon?
+A: Add the favicon.ico file to the root directory and add the following to the HTML header:
 
-### Q: 图片显示不出来怎么办？
-A: 检查图片路径是否正确，确保图片文件在 `images/` 文件夹中。
-
-### Q: 如何更改网站图标？
-A: 添加favicon.ico文件到根目录，并在HTML头部添加：
-```html
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-```
+Q: How do I add Google Analytics?
+A: </head>Add the Google Analytics tracking code before the tag.
 
-### Q: 如何添加Google Analytics？
-A: 在 `</head>` 标签前添加Google Analytics跟踪代码。
+Q: Is there a display issue on mobile devices?
+A: Check if the viewport meta tag is set correctly and ensure that media queries in the CSS are working properly.
 
-### Q: 移动端显示有问题？
-A: 检查viewport meta标签是否正确设置，确保CSS中的媒体查询正常工作。
+📱 Browser compatibility
+✅ Chrome 60+
+✅ Firefox 60+
+✅ Safari 12+
+✅ Edge 79+
+📄 License
+MIT License - You are free to use and modify this template.
 
-## 📱 浏览器兼容性
+🙏 Acknowledgements
+The design inspiration comes from best practices of modern academic websites.
+Used Font Awesome icon library
+For the best reading experience, use the Inter font.
+📧 Support
+If you encounter any problems during use, you can:
 
-- ✅ Chrome 60+
-- ✅ Firefox 60+
-- ✅ Safari 12+
-- ✅ Edge 79+
-
-## 📄 许可证
-
-MIT License - 你可以自由使用和修改这个模板。
-
-## 🙏 致谢
-
-- 设计灵感来源于现代学术网站最佳实践
-- 使用了Font Awesome图标库
-- 采用Inter字体获得最佳阅读体验
-
-## 📧 支持
-
-如果你在使用过程中遇到问题，可以：
-1. 查看这个README文档
-2. 检查浏览器开发者控制台的错误信息
-3. 参考其他学术网站的设计
-
----
-
-�� **祝你的学术网站建设顺利！** 
+View this README document
+Check the error messages in the browser developer console.
+Referencing the design of other academic websites
+Wishing you a successful academic website launch!
