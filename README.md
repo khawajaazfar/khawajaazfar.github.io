@@ -2,22 +2,6 @@
 
 A modern, responsive, and feature-rich portfolio website built with HTML, CSS, and vanilla JavaScript.
 
-## 📁 File Structure
-
-```
-portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # Complete styling
-├── script.js           # Interactive features
-├── images/
-│   ├── Profile.jpg     # Your profile photo
-│   ├── YoloV26 pic.jpg # Publication image
-│   └── favicon.png     # Website favicon
-├── files/
-│   └── KhawajaAzfar_CV.pdf  # Your CV
-└── README.md           # This file
-```
-
 ## 🎯 Features
 
 ### ✨ Design Features
