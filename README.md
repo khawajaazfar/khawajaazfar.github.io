@@ -1,4 +1,4 @@
-# Khawaja Azfar Asif - Portfolio Website 🚀
+# Portfolio Website 🚀
 
 A modern, responsive, and feature-rich portfolio website built with HTML, CSS, and vanilla JavaScript.
 
@@ -39,9 +39,7 @@ A modern, responsive, and feature-rich portfolio website built with HTML, CSS, a
 
 2. **Add your files:**
    - Place your profile photo as `images/Profile.jpg`
-   - Place your publication image as `images/YoloV26 pic.jpg`
    - Place your favicon as `images/favicon.png`
-   - Place your CV as `files/KhawajaAzfar_CV.pdf`
 
 ### Step 2: Copy Code Files
 
@@ -53,11 +51,9 @@ Copy these three files into your portfolio folder:
 ### Step 3: Update Personal Information
 
 In `index.html`, update:
-- Email: `khawajaazfar@protonmail.com` → your email
 - LinkedIn URL: Update the LinkedIn profile link
 - GitHub URL: Update your GitHub profile
 - Google Scholar: Update your Scholar profile
-- CV path: Ensure `files/KhawajaAzfar_CV.pdf` exists
 - Image paths: Verify `images/Profile.jpg` and `images/YoloV26 pic.jpg` exist
 
 ## 💻 Local Testing
