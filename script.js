@@ -1,313 +1,329 @@
-// Mobile Navigation Toggle
+/* ═══════════════════════════════════════════════════════════════
+   KHAWAJA AZFAR ASIF - PORTFOLIO JAVASCRIPT
+   Interactive features: filtering, animations, and enhancements
+   ═══════════════════════════════════════════════════════════════ */
+
+// ─────────────────────────────────────────────────────────────
+// 1. ACTIVITY FILTERING
+// ─────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
+  
+  // Get all filter buttons and activity cards
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const activityCards = document.querySelectorAll('.activity-card');
+  const expandAllBtn = document.getElementById('expandAllBtn');
 
-    // Toggle mobile menu
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+  // Add click event listeners to filter buttons
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filterValue = this.getAttribute('data-filter');
+      
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      // Filter activity cards
+      activityCards.forEach(card => {
+        const cardYear = card.getAttribute('data-year');
+        
+        if (filterValue === 'all') {
+          // Show all cards with animation
+          card.style.display = 'block';
+          card.style.opacity = '0';
+          card.style.animation = 'none';
+          
+          // Trigger reflow to restart animation
+          void card.offsetWidth;
+          
+          card.style.animation = 'slideInLeft 0.4s ease-out forwards';
+        } else if (cardYear === filterValue) {
+          // Show matching cards
+          card.style.display = 'block';
+          card.style.opacity = '0';
+          card.style.animation = 'none';
+          
+          // Trigger reflow
+          void card.offsetWidth;
+          
+          card.style.animation = 'slideInLeft 0.4s ease-out forwards';
+        } else {
+          // Hide non-matching cards
+          card.style.display = 'none';
+        }
+      });
+      
+      // Smooth scroll to news section
+      document.getElementById('news').scrollIntoView({ behavior: 'smooth' });
     });
+  });
 
-    // Close mobile menu when clicking on a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+  // ─────────────────────────────────────────────────────────────
+  // 2. EXPAND/COLLAPSE ALL ACTIVITIES
+  // ─────────────────────────────────────────────────────────────
+
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener('click', function() {
+      const isExpanded = this.classList.contains('expanded');
+      
+      if (!isExpanded) {
+        // Show all activities
+        activityCards.forEach(card => {
+          card.style.display = 'block';
         });
+        
+        this.classList.add('expanded');
+        this.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Show Less Activities';
+      } else {
+        // Hide extra activities (keep only 3 most recent per year)
+        activityCards.forEach((card, index) => {
+          if (index > 8) {
+            card.style.display = 'none';
+          }
+        });
+        
+        this.classList.remove('expanded');
+        this.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Show All Activities';
+      }
     });
+  }
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
-});
+  // ─────────────────────────────────────────────────────────────
+  // 3. SMOOTH SCROLL FOR ANCHOR LINKS
+  // ─────────────────────────────────────────────────────────────
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      
+      // Only prevent default for valid section links
+      if (href !== '#' && document.querySelector(href)) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerOffset = 80;
-            const elementPosition = target.offsetTop;
-            const offsetPosition = elementPosition - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+        
+        const target = document.querySelector(href);
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     });
-});
+  });
 
-// Navbar background on scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
+  // ─────────────────────────────────────────────────────────────
+  // 4. ACTIVE SECTION HIGHLIGHTING (Optional)
+  // ─────────────────────────────────────────────────────────────
 
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-        }
-    });
-}, observerOptions);
-
-// Observe all sections for animations
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
+  function highlightActiveSection() {
+    const sections = document.querySelectorAll('.section');
+    
     sections.forEach(section => {
-        observer.observe(section);
+      const sectionTop = section.offsetTop - 200;
+      const sectionHeight = section.offsetHeight;
+      
+      if (window.scrollY >= sectionTop && 
+          window.scrollY < sectionTop + sectionHeight) {
+        // Section is in view
+        section.style.opacity = '1';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightActiveSection);
+
+  // ─────────────────────────────────────────────────────────────
+  // 5. SCROLL-TO-TOP BUTTON
+  // ─────────────────────────────────────────────────────────────
+
+  const scrollToTopBtn = document.createElement('button');
+  scrollToTopBtn.id = 'scrollToTopBtn';
+  scrollToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+  scrollToTopBtn.className = 'scroll-to-top-btn';
+  document.body.appendChild(scrollToTopBtn);
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // 6. LAZY LOAD IMAGES
+  // ─────────────────────────────────────────────────────────────
+
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src || img.src;
+          img.classList.add('loaded');
+          observer.unobserve(img);
+        }
+      });
+    }, {
+      rootMargin: '50px'
     });
 
-    // Add animation classes to elements
-    const animateElements = document.querySelectorAll('.publication-item, .timeline-item, .news-item, .info-card, .research-card');
-    animateElements.forEach(element => {
-        observer.observe(element);
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
     });
-});
+  }
 
-// Add CSS for animations
-const style = document.createElement('style');
-style.textContent = `
-    /* Animation styles */
-    section, .publication-item, .timeline-item, .news-item, .info-card, .research-card {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
+  // ─────────────────────────────────────────────────────────────
+  // 7. NOTIFICATION SYSTEM
+  // ─────────────────────────────────────────────────────────────
 
-    section.animate-in, .publication-item.animate-in, .timeline-item.animate-in, .news-item.animate-in, .info-card.animate-in, .research-card.animate-in {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Hamburger animation */
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    /* Loading animation for images */
-    .profile-image img, .research-image img {
-        transition: opacity 0.3s ease;
-    }
-
-    .profile-image img:not([src]), .research-image img:not([src]) {
-        opacity: 0;
-    }
-
-    /* Hover effects */
-    .timeline-item:hover .timeline-content {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .news-item:hover {
-        transform: translateX(5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .info-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Stagger animation for timeline items */
-    .timeline-item:nth-child(1) { transition-delay: 0.1s; }
-    .timeline-item:nth-child(2) { transition-delay: 0.2s; }
-    .timeline-item:nth-child(3) { transition-delay: 0.3s; }
-    .timeline-item:nth-child(4) { transition-delay: 0.4s; }
-
-    /* Stagger animation for news items */
-    .news-item:nth-child(1) { transition-delay: 0.1s; }
-    .news-item:nth-child(2) { transition-delay: 0.2s; }
-    .news-item:nth-child(3) { transition-delay: 0.3s; }
-
-    /* Stagger animation for info cards */
-    .info-card:nth-child(1) { transition-delay: 0.1s; }
-    .info-card:nth-child(2) { transition-delay: 0.2s; }
-`;
-
-document.head.appendChild(style);
-
-// Typing effect for the main title (optional)
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Add scroll-to-top functionality
-function addScrollToTop() {
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
-    
-    const scrollToTopStyle = `
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3);
-        }
-        
-        .scroll-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .scroll-to-top:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
+  function showNotification(message, type = 'success', duration = 3000) {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+      <div class="notification-content">
+        <i class="fa-solid fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+        <span>${message}</span>
+      </div>
     `;
     
-    const styleSheet = document.createElement('style');
-    styleSheet.textContent = scrollToTopStyle;
-    document.head.appendChild(styleSheet);
+    document.body.appendChild(notification);
     
-    document.body.appendChild(scrollToTopBtn);
+    // Trigger animation
+    setTimeout(() => {
+      notification.classList.add('show');
+    }, 10);
     
-    // Show/hide scroll to top button
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
+    // Remove after duration
+    setTimeout(() => {
+      notification.classList.remove('show');
+      setTimeout(() => {
+        notification.remove();
+      }, 300);
+    }, duration);
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // 8. TRACK LINK CLICKS
+  // ─────────────────────────────────────────────────────────────
+
+  function trackLinkClicks() {
+    const links = document.querySelectorAll('a[target="_blank"]');
+    
+    links.forEach(link => {
+      link.addEventListener('click', function() {
+        const linkText = this.textContent;
+        const linkHref = this.href;
+        
+        console.log('External link clicked:', linkText, linkHref);
+      });
     });
+  }
+
+  trackLinkClicks();
+
+  // ─────────────────────────────────────────────────────────────
+  // 9. DARK MODE TOGGLE (Optional - for future implementation)
+  // ─────────────────────────────────────────────────────────────
+
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  
+  if (darkModeToggle) {
+    // Check for saved theme preference
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
     
-    // Scroll to top functionality
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    darkModeToggle.addEventListener('click', function() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
     });
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // 10. PERFORMANCE OPTIMIZATION
+  // ─────────────────────────────────────────────────────────────
+
+  // Debounce function for scroll events
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  // Use debounce for scroll events
+  const debouncedScroll = debounce(highlightActiveSection, 100);
+  window.addEventListener('scroll', debouncedScroll);
+
+});
+
+// ─────────────────────────────────────────────────────────────
+// 11. UTILITY FUNCTIONS
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Get URL parameters
+ */
+function getURLParameter(name) {
+  return new URLSearchParams(window.location.search).get(name);
 }
 
-// Initialize scroll to top button
-document.addEventListener('DOMContentLoaded', addScrollToTop);
+/**
+ * Format date
+ */
+function formatDate(date) {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(new Date(date));
+}
 
-// Handle image loading errors
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
-        img.addEventListener('error', function() {
-            // Create a placeholder if image fails to load
-            const placeholder = document.createElement('div');
-            placeholder.style.cssText = `
-                width: ${this.width || '300'}px;
-                height: ${this.height || '300'}px;
-                background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
-                border-radius: ${this.style.borderRadius || '0'};
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #64748b;
-                font-size: 14px;
-                text-align: center;
-                padding: 20px;
-                box-sizing: border-box;
-            `;
-            placeholder.textContent = 'Image not available';
-            
-            if (this.parentNode) {
-                this.parentNode.replaceChild(placeholder, this);
-            }
-        });
-    });
-});
+/**
+ * Check if element is in viewport
+ */
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-// Add keyboard navigation support
-document.addEventListener('keydown', function(e) {
-    // Press 'Escape' to close mobile menu
-    if (e.key === 'Escape') {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (navMenu.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
+/**
+ * Add event listener with event delegation
+ */
+function delegateEvent(parentSelector, eventType, childSelector, callback) {
+  const parent = document.querySelector(parentSelector);
+  
+  if (!parent) return;
+  
+  parent.addEventListener(eventType, function(event) {
+    const target = event.target.closest(childSelector);
+    if (target) {
+      callback.call(target, event);
     }
-});
+  });
+}
 
-// Add focus management for accessibility
-document.addEventListener('DOMContentLoaded', function() {
-    const focusableElements = 'a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
-    const modal = document.querySelector('.nav-menu');
-    
-    if (modal) {
-        const firstFocusableElement = modal.querySelectorAll(focusableElements)[0];
-        const focusableContent = modal.querySelectorAll(focusableElements);
-        const lastFocusableElement = focusableContent[focusableContent.length - 1];
-        
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab' && modal.classList.contains('active')) {
-                if (e.shiftKey) {
-                    if (document.activeElement === firstFocusableElement) {
-                        lastFocusableElement.focus();
-                        e.preventDefault();
-                    }
-                } else {
-                    if (document.activeElement === lastFocusableElement) {
-                        firstFocusableElement.focus();
-                        e.preventDefault();
-                    }
-                }
-            }
-        });
-    }
-});
-
-console.log('Academic homepage script loaded successfully!'); 
+// ═══════════════════════════════════════════════════════════════
+// End of Script
+// ═══════════════════════════════════════════════════════════════

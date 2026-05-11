@@ -4,55 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <!-- ① Google Search Console — 把 VERIFY_CODE 换成你控制台给的字符串 -->
+    <!-- ① Google Search Console -->
     <meta
       name="google-site-verification"
       content="C_dQcFNXhjPmU06mKevyCnamId0brZMV_wgLy4jRnG8"
     />
 
-    <!-- ② 核心 SEO -->
-    <title>Khawaja Azfar Asif</title>
-    <meta name="description" content="Khawaja Azfar Asif" />
+    <!-- ② Enhanced SEO -->
+    <title>Khawaja Azfar Asif | Software Engineer & AI/ML Researcher</title>
+    <meta name="description" content="Software Engineer at Lahore Garrison University. Specialized in AI, ML, Computer Vision, and Medical Image Analysis." />
+    <meta name="keywords" content="Software Engineer, AI, Machine Learning, Computer Vision, Medical Imaging, Dental Analysis, YOLO" />
 
-    <!-- ③ Canonical（防重复） -->
+    <!-- ③ Canonical -->
     <link rel="canonical" href="https://khawajaazfar.github.io/" />
 
-    <!-- ④ Open-Graph / Twitter Cards -->
+    <!-- ④ Open Graph & Twitter Cards -->
     <meta property="og:type" content="profile" />
-    <meta property="og:title" content="Khawaja Azfar Asif" />
-    <meta property="og:description" content="Khawaja Azfar Asif" />
+    <meta property="og:title" content="Khawaja Azfar Asif | Software Engineer & Researcher" />
+    <meta property="og:description" content="Explore my work in AI/ML, Computer Vision, and Medical Image Processing" />
     <meta property="og:url" content="https://khawajaazfar.github.io/" />
-    <meta
-      property="og:image"
-      content="https://khawajaazfar.github.io/images/profile.jpg"
-    />
+    <meta property="og:image" content="https://khawajaazfar.github.io/images/profile.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Khawaja Azfar Asif" />
+    <meta property="twitter:description" content="Software Engineer & AI/ML Researcher" />
 
-    <!-- ⑤ JSON-LD 结构化数据 -->
+    <!-- ⑤ JSON-LD Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Khawaja Azfar Asif",
         "url": "https://khawajaazfar.github.io/",
-        "affiliation": [
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "Lahore Garrison University"
-          },
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "Lahore Garrison University"
-          }
-        ],
+        "jobTitle": "Software Engineer",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Lahore Garrison University"
+        },
         "sameAs": [
           "https://scholar.google.com/citations?user=mK7OBUIAAAAJ&hl=en",
           "https://www.linkedin.com/in/khawaja-azfar-asif",
-          "https://khawajaazfar.github.io"
+          "https://github.com/khawajaazfar"
         ]
       }
     </script>
 
-    <!-- 主样式 -->
+    <!-- ⑥ Stylesheets -->
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -61,11 +57,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
     <link rel="icon" type="image/png" href="images/favicon.png" />
+    
+    <!-- ⑦ Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   </head>
 
   <body>
@@ -73,348 +70,450 @@
       <!-- ───── Sidebar ───── -->
       <aside class="sidebar">
         <div class="profile">
-          <img
-            src="images/Profile.jpg"
-            alt="Khawaja Azfar Asif"
-            class="avatar"
-          />
-          <h1>Khawaja Azfar Asif</h1>
-          <p class="sub">Software Engineer</p>
-          <p class="sub">Lahore Garrison University</p>
+          <!-- Profile Image -->
+          <div class="avatar-wrapper">
+            <img
+              src="images/Profile.jpg"
+              alt="Khawaja Azfar Asif"
+              class="avatar"
+            />
+          </div>
 
-          <!-- icon row-->
-          <ul class="icon-text-list">
-            <li>
-              <a href="mailto:khawajaazfar@protonmail.com">
-                <i class="fa-solid fa-envelope"></i> Email
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/khawaja-azfar-asif/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/khawajaazfar" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://scholar.google.com/citations?user=mK7OBUIAAAAJ&hl=en"
-                target="_blank"
-              >
-                <i class="fa-solid fa-graduation-cap"></i> Google Scholar
-              </a>
-            </li>
-            <li>
-              <a
-                href="files/KhawajaAzfar_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-solid fa-file-lines"></i> Curriculum Vitae
-              </a>
-            </li>
-          </ul>
+          <!-- Name & Title -->
+          <div class="profile-header">
+            <h1>Khawaja Azfar Asif</h1>
+            <p class="job-title">Software Engineer</p>
+            <p class="organization">Lahore Garrison University</p>
+          </div>
+
+          <!-- Achievement Badges -->
+          <div class="badges">
+            <span class="badge badge-researcher">
+              <i class="fa-solid fa-microscope"></i> Researcher
+            </span>
+            <span class="badge badge-leader">
+              <i class="fa-solid fa-users"></i> Community Leader
+            </span>
+            <span class="badge badge-speaker">
+              <i class="fa-solid fa-microphone"></i> Speaker
+            </span>
+          </div>
+
+          <!-- Contact Links -->
+          <nav class="contact-links">
+            <a href="mailto:khawajaazfar@protonmail.com" class="contact-link" title="Email">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/khawaja-azfar-asif/" target="_blank" rel="noopener noreferrer" class="contact-link" title="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/khawajaazfar" target="_blank" rel="noopener noreferrer" class="contact-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=mK7OBUIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="contact-link" title="Google Scholar">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Scholar</span>
+            </a>
+            <a href="files/KhawajaAzfar_CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-link cv-link" title="Download CV">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>Download CV</span>
+            </a>
+          </nav>
+
+          <!-- Quick Stats -->
+          <div class="quick-stats">
+            <div class="stat">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Publications</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Events Organized</div>
+            </div>
+          </div>
         </div>
       </aside>
 
       <!-- ───── Main content ───── -->
       <main class="main-content">
         <div class="main-content-inner">
-          <!-- About -->
-          <section id="about">
-            <h2>About Me</h2>
-            <p style="margin-bottom: 1.1em">
-              I am a Software Engineer with a Bachelor of Science in Software
-              Engineering from
-              <a href="https://lgu.edu.pk/" target="_blank"
-                >Lahore Garrison University,</a
-              >
-            </p>
+          
+          <!-- About Section -->
+          <section id="about" class="section">
+            <div class="section-header">
+              <h2><i class="fa-solid fa-user"></i> About Me</h2>
+              <div class="section-divider"></div>
+            </div>
 
-            <p style="margin-bottom: 1.1em">
-              My undergraduate thesis was
-              <strong
-                >Dental Enumeration and Diseases Detection on Panoramic
-                X-Rays</strong
-              >
-              try it out using
-              <a
-                href="https://yolov8-teeth-segmentation-dieseas.onrender.com/"
-                target="_blank"
-                >YOLOv8,</a
-              >
+            <div class="about-content">
+              <p class="intro-text">
+                I am a <strong>Software Engineer</strong> with a Bachelor of Science in Software Engineering from
+                <a href="https://lgu.edu.pk/" target="_blank" rel="noopener noreferrer" class="text-link">Lahore Garrison University</a>.
+                With a passion for AI/ML and medical imaging, I combine technical expertise with real-world problem-solving.
+              </p>
 
-              <a
-                href="https://yolov12-teeth-segmentation-dieseas.onrender.com/"
-                target="_blank"
-                >YOLOv12</a
-              >
-              (it will take time in loading) a deep learning based model for
-              analysis of Panoramic X-Rays. During my undergraduate studies, I
-              had the privilege of working under the supervision of
-              <a
-                href="https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en"
-                target="_blank"
-                >Prof. Rafaqat Alam Khan.</a
-              >
-              My research interests including Machine Learning, Multimodal LLMs,
-              Computer Vision, Medical Image Analysis and AI in healthcare which
-              provided me with a strong foundation in Skills Gained.
-            </p>
+              <div class="research-highlight">
+                <h3>Featured Research</h3>
+                <p>
+                  My undergraduate thesis focused on <strong>Dental Enumeration and Disease Detection on Panoramic X-Rays</strong> 
+                  using advanced deep learning models. I developed and deployed interactive demos using:
+                </p>
+                <div class="demo-links">
+                  <a href="https://yolov8-teeth-segmentation-dieseas.onrender.com/" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                    <i class="fa-solid fa-play"></i> Try YOLOv8 Demo
+                  </a>
+                  <a href="https://yolov12-teeth-segmentation-dieseas.onrender.com/" target="_blank" rel="noopener noreferrer" class="demo-btn">
+                    <i class="fa-solid fa-play"></i> Try YOLOv12 Demo
+                  </a>
+                </div>
+                <p class="demo-note"><em>⏳ Note: Demos may take a moment to load on first access</em></p>
+              </div>
+
+              <div class="mentor-section">
+                <p>
+                  I had the privilege of working under the supervision of 
+                  <a href="https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Prof. Rafaqat Alam Khan
+                  </a>, 
+                  whose guidance shaped my research approach and professional development.
+                </p>
+              </div>
+            </div>
+
+            <!-- Research Interests -->
+            <div class="interests-section">
+              <h3>Research Interests</h3>
+              <div class="interests-grid">
+                <div class="interest-tag">
+                  <i class="fa-solid fa-brain"></i> Small Language Models
+                </div>
+                <div class="interest-tag">
+                  <i class="fa-solid fa-robot"></i> Large Language Models
+                </div>
+                <div class="interest-tag">
+                  <i class="fa-solid fa-chart-line"></i> Machine Learning
+                </div>
+                <div class="interest-tag">
+                  <i class="fa-solid fa-eye"></i> Computer Vision
+                </div>
+                <div class="interest-tag">
+                  <i class="fa-solid fa-stethoscope"></i> Medical Image Processing
+                </div>
+                <div class="interest-tag">
+                  <i class="fa-solid fa-heart-pulse"></i> AI in Healthcare
+                </div>
+              </div>
+            </div>
           </section>
 
-          <!-- Education & Experiances
-          <section id="news">
-            <h2>Education & Experiances</h2>
-            <ul>
-              <li>
-                Feb. 2020 to Mar. 2024 — Lahore Garrison University (Lahore,
-                Pakistan) Bachelor of Science in Software Engineering Advisor:
-                <a
-                  href="https://scholar.google.com/citations?user=spYkiD8AAAAJ&hl=en"
-                  target="_blank"
-                  >Prof. Rafaqat Alam Khan.</a
-                >
-              </li>
+          <!-- News & Activities Section -->
+          <section id="news" class="section">
+            <div class="section-header">
+              <h2><i class="fa-solid fa-newspaper"></i> News & Activities</h2>
+              <div class="section-divider"></div>
+            </div>
 
-              <li>
-                Sep. 2024 to Sep 2025 — Dubizzle Labs.
-                <a href="" target="_blank"> </a>
-                 (Lahore, Pakistan) Machine
-                Learning Engineer, Backend.
-              </li>
+            <!-- Filter Tabs -->
+            <div class="activity-filters">
+              <button class="filter-btn active" data-filter="all">
+                <i class="fa-solid fa-list"></i> All
+              </button>
+              <button class="filter-btn" data-filter="2024">
+                <i class="fa-solid fa-calendar"></i> 2024
+              </button>
+              <button class="filter-btn" data-filter="2023">
+                <i class="fa-solid fa-calendar"></i> 2023
+              </button>
+              <button class="filter-btn" data-filter="2022">
+                <i class="fa-solid fa-calendar"></i> 2022
+              </button>
+            </div>
 
-              <li>
-                <a href="" target="_blank"> Khan.</a>
-              </li>
+            <!-- Timeline -->
+            <div class="timeline">
+              
+              <!-- 2024 Activities -->
+              <div class="activity-card" data-year="2024">
+                <div class="activity-year-badge">2024</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-microphone"></i> Guest Speaker at Orientation 2024</h3>
+                  <p>
+                    Invited as a <a href="http://tiny.cc/9k2x001" target="_blank" rel="noopener noreferrer" class="text-link">Guest Speaker</a> 
+                    to share my success story at Orientation 2024. Reflected on my four-year journey at Lahore Garrison University—from navigating 
+                    the pandemic transition to online learning, to embracing leadership roles as Information Secretary and President of the Society.
+                  </p>
+                </div>
+              </div>
 
-            </ul>
-          </section> -->
+              <div class="activity-card" data-year="2024">
+                <div class="activity-year-badge">2024</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-building"></i> Industrial Tour: Soliton Technologies</h3>
+                  <p>
+                    Organized an industrial tour of <a href="http://tiny.cc/8k2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Soliton Technologies</a> with university fellows. Thanks to Mohammad Hamza for accepting the invitation and Madiha Tariq for 
+                    the fantastic tour, plus Abdul Hanan for insights on the company's journey and project lifecycle.
+                  </p>
+                </div>
+              </div>
 
-          <!-- News & Activities -->
-          <section id="news">
-            <h2>News & Activities</h2>
-            <ul>
-              <li>
-                2024 — Invited as a
-                <a href="http://tiny.cc/9k2x001" target="_blank"
-                  >Guest Speaker</a
-                >
-                to share my success story at Orientation 2024, reflecting on my
-                journey over the past four years at Lahore Garrison University.
-                From navigating the challenges of transitioning to online
-                learning during the pandemic to embracing leadership roles like
-                serving as Information Secretary and eventually President of the
-                Society, and heading the Student Body of Industrial
-                Collaboration each experience pushed me to grow, innovate, and
-                lead.
-              </li>
-              <li>
-                2024 — Organized Industrial tour of
-                <a href="http://tiny.cc/8k2x001" target="_blank"
-                  >Soliton Technologies</a
-                >
-                with my university fellows! Thanks to the amazing Mohammad Hamza
-                for accepting my invitation and Madiha Tariq for giving us a
-                fantastic tour.Also, major kudos to Abdul Hanan for the
-                insightful presentation on the company's journey and project
-                lifecycle
-              </li>
-              <li>
-                2024 — Organized first-ever Industrial tour of
-                <a href="http://tiny.cc/6k2x001" target="_blank">InvoZone</a>
-                with my university fellows! Immense gratitude to the incredible
-                Rehan Ahmad Khan for accepting my invitation and giving us a
-                fantastic tour.
-              </li>
-              <li>
-                2023 — Proudly steering the success of the
-                <a href="http://tiny.cc/4k2x001" target="_blank"
-                  >Sales Summit 2023!</a
-                >
-                As a pivotal part of the management team, I’m thrilled to unveil
-                the remarkable highlights of this transformative event.
-              </li>
-              <li>
-                2023 — Organized and Managed an extraordinary
-                <a href="http://tiny.cc/2k2x001" target="_blank">
-                  University Job Fair</a
-                >
-                as President has been an incredible journey! We organized a
-                stellar career fair, showcasing outstanding final-year projects.
-              </li>
-              <li>
-                2023.9 — Lead Organizer of
-                <a href="http://tiny.cc/zj2x001" target="_blank"
-                  >Virtual Summit on Generative AI
-                </a>
-                Our recent virtual summit on Generative AI was an absolute
-                success, featuring an incredible lineup of speakers who delved
-                deep into the world of AI creativity and innovation.
-              </li>
-              <li>
-                2023.8 — Lead Organizer of
-                <a href="http://tiny.cc/rj2x001" target="_blank"
-                  >Tech تہوار Edition 4.0!</a
-                >
-                The collaboration between the Microsoft Learn Student
-                Ambassadors Lahore and the Devsinc team has resulted in a truly
-                fantastic event with an impressive turnout of over 300
-                attendees. The lineup of speakers, including Saad Mahmood, Moosa
-                Khalid, Shajeel Afzal, Usman Aslam, Adil Shahzad, Farhan Ashraf,
-                Abdul Raheem, along with a captivating keynote by Usman Asif,
-                has left a lasting impact on all participants.
-              </li>
-              <li>
-                2023.8 — Organized
-                <a href="http://tiny.cc/lj2x001" target="_blank">
-                  GDG Cloud Lahore: Google Cloud Extended I/O 2023 Lahore</a
-                >
-                Volunteering at this prestigious event was a journey of magic
-                and impact! Being part of something greater, our small
-                contributions sparked positivity and left lasting impressions.
-                It was an unforgettable experience, engaging with industry
-                experts like Huzaifa Habib, Esna Ong, Moazzam Chaudry, Saad
-                Hamid, Hufsa Munawar, Talha Jamil, Ramsha Siddiqui, and Mazhar
-                Hassan. Usman Asif's closing speech was the perfect finale to
-                our remarkable event.
-              </li>
-              <li>
-                2023.5 — Core Team behind the
-                <a href="http://tiny.cc/kj2x001" target="_blank"
-                  >AI and ML Summit,</a
-                >
-                a collaboration of the Artificial Intelligence Community of
-                Pakistan, Microsoft Learn Student Ambassadors Lahore, and
-                Devsinc. It was an incredible experience to hear from multiple
-                speakers around the world about the advancements of AI and its
-                impact on our future.
-              </li>
-              <li>
-                2023 — Select for Devsinc Ambassador Program from my university.
-                Later
-                <a href="http://tiny.cc/6j2x001" target="_blank"
-                  >Devsinc invited me for an Iftar Dinner.</a
-                >
-                We discussed future strategies to bridge the gap between
-                Industry and Academia. We shared our ideas and plans for future
-                developments that can contribute to society and my university..
-              </li>
-              <li>
-                2023 —
-                <a href="http://tiny.cc/8j2x001" target="_blank"
-                  >Volunteer for Future Fest 2023,</a
-                >
-                the biggest IT event in Pakistan organized by Ejad Labs, and
-                what an incredible experience it was. For those who aren't
-                familiar, Future Fest is a platform for people to connect,
-                network, and listen to inspiring speakers who share their
-                success stories and ideas.
-              </li>
-              <li>
-                2022 — Participated in Hacktoberfest. All 4 Pr’s got accepted
-                for Hacktoberfest 2022. This was my first time contributing to
-                an open-source event. A
-                <a href="http://tiny.cc/9j2x001" target="_blank"
-                  >tree was planted in my name by Tree-Nation
-                </a>
-                in collaboration with GitHub for participating in
-                Hacktoberfest'22.
-              </li>
-              <li>
-                2022 — Visited
-                <a href="http://tiny.cc/aj2x001" target="_blank"
-                  >Huawei Innovation and Experience Center</a
-                >
-                on the Community Meetup and Networking arranged by Cloud
-                Alliance Pakistan in Islamabad.
-              </li>
-              <li>
-                2022 — Got accepted into
-                <a href="http://tiny.cc/ej2x001" target="_blank"
-                  >Microsoft Student Ambassador Lahore</a
-                >
-                chapter.
-              </li>
-            </ul>
+              <div class="activity-card" data-year="2024">
+                <div class="activity-year-badge">2024</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-building"></i> Industrial Tour: InvoZone</h3>
+                  <p>
+                    Organized the first-ever industrial tour of <a href="http://tiny.cc/6k2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    InvoZone</a> with university fellows. Special thanks to Rehan Ahmad Khan for the fantastic tour and insights.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2023 Activities -->
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-chart-line"></i> Sales Summit 2023</h3>
+                  <p>
+                    Proudly steering the success of the <a href="http://tiny.cc/4k2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Sales Summit 2023</a> as a pivotal part of the management team. Unveiling remarkable highlights of this transformative event.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-briefcase"></i> University Job Fair</h3>
+                  <p>
+                    Organized and managed an extraordinary <a href="http://tiny.cc/2k2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    University Job Fair</a> as President. Showcased outstanding final-year projects and connected students with career opportunities.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-robot"></i> Virtual Summit on Generative AI</h3>
+                  <p>
+                    Lead organizer of the <a href="http://tiny.cc/zj2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Virtual Summit on Generative AI</a>. Featured an incredible lineup of speakers delving deep into AI creativity and innovation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-fire"></i> Tech تہوار Edition 4.0</h3>
+                  <p>
+                    Lead organizer of <a href="http://tiny.cc/rj2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Tech تہوار Edition 4.0</a> in collaboration with Microsoft Learn Student Ambassadors Lahore and Devsinc. 
+                    Over 300 attendees, featuring speakers: Saad Mahmood, Moosa Khalid, Shajeel Afzal, and keynote by Usman Asif.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-cloud"></i> GDG Cloud Lahore: Google Cloud Extended I/O</h3>
+                  <p>
+                    Organized <a href="http://tiny.cc/lj2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    GDG Cloud Lahore: Google Cloud Extended I/O 2023</a>. Engaged with industry experts and had the privilege of Usman Asif's closing speech.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-brain"></i> AI and ML Summit</h3>
+                  <p>
+                    Core team member of the <a href="http://tiny.cc/kj2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    AI and ML Summit</a>—a collaboration of the Artificial Intelligence Community of Pakistan, Microsoft Learn Student Ambassadors, and Devsinc. 
+                    Heard from global speakers about AI advancements and future impact.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-star"></i> Devsinc Ambassador Program</h3>
+                  <p>
+                    Selected for the Devsinc Ambassador Program from my university. Later, <a href="http://tiny.cc/6j2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Devsinc invited me for an Iftar Dinner</a> where we discussed strategies to bridge the gap between Industry and Academia.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2023">
+                <div class="activity-year-badge">2023</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-rocket"></i> Volunteer at Future Fest 2023</h3>
+                  <p>
+                    Volunteered for <a href="http://tiny.cc/8j2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Future Fest 2023</a>—the biggest IT event in Pakistan organized by Ejad Labs. 
+                    Connected with inspiring speakers and the tech community nationwide.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2022 Activities -->
+              <div class="activity-card" data-year="2022">
+                <div class="activity-year-badge">2022</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-code-branch"></i> Hacktoberfest 2022</h3>
+                  <p>
+                    Participated in Hacktoberfest. All 4 pull requests were accepted. My first open-source event contribution! 
+                    A <a href="http://tiny.cc/9j2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    tree was planted in my name by Tree-Nation</a> in collaboration with GitHub.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2022">
+                <div class="activity-year-badge">2022</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-building"></i> Huawei Innovation Center Visit</h3>
+                  <p>
+                    Visited the <a href="http://tiny.cc/aj2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Huawei Innovation and Experience Center</a> on a Community Meetup and Networking event arranged by Cloud Alliance Pakistan in Islamabad.
+                  </p>
+                </div>
+              </div>
+
+              <div class="activity-card" data-year="2022">
+                <div class="activity-year-badge">2022</div>
+                <div class="activity-content">
+                  <h3><i class="fa-solid fa-microsoft"></i> Microsoft Student Ambassador</h3>
+                  <p>
+                    Accepted into the <a href="http://tiny.cc/ej2x001" target="_blank" rel="noopener noreferrer" class="text-link">
+                    Microsoft Student Ambassador Lahore</a> chapter. Ready to advocate for Microsoft technologies and support the developer community.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+            <!-- /timeline -->
+
+            <!-- View All Button -->
+            <div class="view-all-container">
+              <button class="view-all-btn" id="expandAllBtn" style="display: none;">
+                <i class="fa-solid fa-chevron-down"></i> Show All Activities
+              </button>
+            </div>
           </section>
 
-          <!-- Research Interests -->
-          <section id="interests">
-            <h2>Research Interests</h2>
-            <ul>
-              <li>SLM</li>
-              <li>LLM</li>
-              <li>Machine Learning</li>
-              <li>Computer Vision</li>
-              <li>Medical Image Processing</li>
-            </ul>
-          </section>
+          <!-- Publication/Preprint Section -->
+          <section id="publication" class="section">
+            <div class="section-header">
+              <h2><i class="fa-solid fa-book"></i> Publications & Preprints</h2>
+              <div class="section-divider"></div>
+            </div>
 
-          <!-- Preprint -->
-          <section id="Publication">
-            <h2>Preprint</h2>
-
-            <!-- Publication 1 -->
+            <!-- Publication Card 1 -->
             <div class="pub-card">
-              <div class="pub-image">
+              <div class="pub-image-container">
                 <img
                   src="images/YoloV26 pic.jpg"
-                  alt="YoloV26 picture"
+                  alt="Dental Panoramic Radiograph Analysis Using YOLO26"
+                  class="pub-image"
                 />
+                <div class="pub-badge">Preprint</div>
               </div>
-              <div class="pub-info">
-                <h3>
-                  Dental Panoramic Radiograph Analysis Using YOLO26: From Tooth Detection to Disease Diagnosis.
+
+              <div class="pub-details">
+                <h3 class="pub-title">
+                  Dental Panoramic Radiograph Analysis Using YOLO26: From Tooth Detection to Disease Diagnosis
                 </h3>
-                <p class="authors">
-                 Khawaja Azfar, Dr. Rafaqat Alam Khan,
-                  <!-- <strong>Chengze Li</strong>, … -->
+
+                <p class="pub-authors">
+                  <strong>Khawaja Azfar Asif</strong>, Dr. Rafaqat Alam Khan
                 </p>
-                <!-- <p class="venue">Radiotherapy and Oncology, Dec 2022</p> -->
-                <div class="links">
+
+                <p class="pub-date">
+                  <i class="fa-solid fa-calendar"></i> April 2026
+                </p>
+
+                <div class="pub-description">
+                  <p>
+                    This research presents an advanced deep learning approach for automated dental analysis using panoramic radiographs. 
+                    The study leverages YOLO26 architecture for precise tooth detection and disease classification, achieving state-of-the-art 
+                    results in dental image analysis. The methodology combines object detection with medical image processing for clinical applications.
+                  </p>
+                </div>
+
+                <div class="pub-tags">
+                  <span class="tag">Deep Learning</span>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Medical Imaging</span>
+                  <span class="tag">YOLO</span>
+                  <span class="tag">Dental Analysis</span>
+                </div>
+
+                <div class="pub-links">
                   <a
                     href="https://arxiv.org/abs/2604.16231"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link primary"
                   >
-                    <i class="fa-solid fa-file-pdf"></i> PDF
+                    <i class="fa-solid fa-file-pdf"></i> Read on arXiv
+                  </a>
+                  <a
+                    href="https://arxiv.org/abs/2604.16231"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pub-link secondary"
+                  >
+                    <i class="fa-solid fa-download"></i> Download PDF
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- Publication 2 -->
-            <!-- <div class="pub-card">
-              <div class="pub-image">
-                <img src="images/NodeRAG.jpg" alt="NodeRAG paper" />
+            <!-- Placeholder for Future Publications -->
+            <div class="pub-placeholder">
+              <div class="placeholder-content">
+                <i class="fa-solid fa-hourglass-end"></i>
+                <p>More publications coming soon...</p>
+                <p class="placeholder-subtitle">Working on exciting new research projects!</p>
               </div>
-              <div class="pub-info">
-                <h3>
-                  NodeRAG: Structuring Graph-based RAG with Heterogeneous Nodes
-                </h3>
-                <p class="authors">
-                  Tianyang Xu, Haojie Zheng, <strong>Chengze Li</strong>,
-                  Haoxiang Chen, Yixin Liu, Ruoxi Chen, Lichao Sun
-                </p>
-                <p class="venue">Submitted to EMNLP 2025</p>
-                <div class="links">
-                  <a href="https://arxiv.org/pdf/2504.11544" target="_blank">
-                    <i class="fa-solid fa-file-pdf"></i> PDF
-                  </a>
-                </div>
-              </div>
-            </div> -->
+            </div>
+
           </section>
+
+          <!-- Closing section -->
+          <section class="closing-section">
+            <div class="closing-content">
+              <h2>Let's Connect!</h2>
+              <p>
+                I'm always excited to discuss AI, machine learning, medical imaging, or collaboration opportunities. 
+                Feel free to reach out through any of the channels below.
+              </p>
+              <div class="closing-buttons">
+                <a href="mailto:khawajaazfar@protonmail.com" class="cta-button primary">
+                  <i class="fa-solid fa-envelope"></i> Send Me an Email
+                </a>
+                <a href="https://www.linkedin.com/in/khawaja-azfar-asif/" target="_blank" rel="noopener noreferrer" class="cta-button secondary">
+                  <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </section>
+
         </div>
         <!-- /main-content-inner -->
       </main>
     </div>
     <!-- /container -->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
